@@ -11,6 +11,7 @@
 		102B59C927A2057C00973EEF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102B59C827A2057C00973EEF /* ContentView.swift */; };
 		102B59CB27A2057D00973EEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 102B59CA27A2057D00973EEF /* Assets.xcassets */; };
 		102B59CE27A2057D00973EEF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 102B59CD27A2057D00973EEF /* Preview Assets.xcassets */; };
+		102B59DB27A4A2A700973EEF /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102B59DA27A4A2A700973EEF /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		102B59C827A2057C00973EEF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		102B59CA27A2057D00973EEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		102B59CD27A2057D00973EEF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		102B59DA27A4A2A700973EEF /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +37,10 @@
 		102B59BA27A2057C00973EEF = {
 			isa = PBXGroup;
 			children = (
-				102B59C527A2057C00973EEF /* Bullseye */,
+				102B59CC27A2057D00973EEF /* Preview Content */,
+				102B59D927A4A1EC00973EEF /* Views */,
+				102B59D827A4A1E600973EEF /* Models */,
+				102B59D727A4A1DD00973EEF /* App */,
 				102B59C427A2057C00973EEF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,23 +53,37 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		102B59C527A2057C00973EEF /* Bullseye */ = {
-			isa = PBXGroup;
-			children = (
-				102B59C627A2057C00973EEF /* BullseyeApp.swift */,
-				102B59C827A2057C00973EEF /* ContentView.swift */,
-				102B59CA27A2057D00973EEF /* Assets.xcassets */,
-				102B59CC27A2057D00973EEF /* Preview Content */,
-			);
-			path = Bullseye;
-			sourceTree = "<group>";
-		};
 		102B59CC27A2057D00973EEF /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
 				102B59CD27A2057D00973EEF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		102B59D727A4A1DD00973EEF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				102B59C627A2057C00973EEF /* BullseyeApp.swift */,
+				102B59CA27A2057D00973EEF /* Assets.xcassets */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		102B59D827A4A1E600973EEF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				102B59DA27A4A2A700973EEF /* Game.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		102B59D927A4A1EC00973EEF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				102B59C827A2057C00973EEF /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				102B59C927A2057C00973EEF /* ContentView.swift in Sources */,
+				102B59DB27A4A2A700973EEF /* Game.swift in Sources */,
 				102B59C727A2057C00973EEF /* BullseyeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,7 +288,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Bullseye/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Preview Content\"";
+				DEVELOPMENT_TEAM = Learning;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -296,7 +317,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Bullseye/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Preview Content\"";
+				DEVELOPMENT_TEAM = Learning;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
