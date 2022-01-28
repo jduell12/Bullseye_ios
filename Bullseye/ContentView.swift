@@ -38,7 +38,7 @@ struct ContentView: View {
                     Text("Hit Me")
                 }.alert(isPresented: $alertIsVisible,
                     content: {
-                    return Alert(title: Text("Hello there!"), message: Text("This is my first popup"), dismissButton: .default(Text("Awesome!")))
+                    return Alert(title: Text("The slider value is \(Int(self.sliderValue))"), message: Text("You scored 200 points"), dismissButton: .default(Text("Start next Round")))
                 })
             }
         }
