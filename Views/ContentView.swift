@@ -13,7 +13,9 @@ struct ContentView: View {
     @State private var game = Game()
     
     var body: some View {
-        VStack {
+        ZStack {
+            Color("BackgroundColor")
+                .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             VStack {
                 Text("🎯🎯🎯\nPut the Bullseye as close as you can to".uppercased())
                     .bold()
@@ -42,7 +44,12 @@ struct ContentView: View {
                         .font(.title3)
                 }
                     .padding(20.0)
-                    .background(.blue)
+                    .background(
+                        ZStack{
+                            Color("ButtonColor")
+                            LinearGradient(gradient: Gradient(colors: [Color.white.opacity(0.3), Color.clear]), startPoint: .top, endPoint: .bottom)
+                        }
+                    )
                     .foregroundColor(.white)
                     .cornerRadius(21.0)
                     .alert(isPresented: $alertIsVisible,
