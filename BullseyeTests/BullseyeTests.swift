@@ -32,4 +32,10 @@ class BullseyeTests: XCTestCase {
         XCTAssertEqual(score, 95)
     }
     
+    func testNextRound() throws {
+        game.startNewRound(points: 100)
+        XCTAssertEqual(game.score, 100)
+        XCTAssertEqual(game.currentRound, 2)
+    }
+    
 }
