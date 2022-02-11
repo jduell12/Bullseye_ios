@@ -18,7 +18,7 @@ struct BackgroundView: View {
         }
         .padding()
         .background(
-            Color("BackgroundColor").edgesIgnoringSafeArea(.all)
+           RingsView()
         )
     }
 }
@@ -34,7 +34,6 @@ struct TopView: View {
             }){
                 RoundedImageViewStroked(systemName: "arrow.counterclockwise")
             }
-            
             Spacer()
             RoundedImageViewFilled(systemName: "list.dash")
         }
@@ -62,6 +61,21 @@ struct BottomView: View {
             NumberView(title: "Score", text: String(game.score))
             Spacer()
             NumberView(title: "Round", text: String(game.currentRound))
+        }
+    }
+}
+
+struct RingsView: View {
+    var body: some View {
+        ZStack{
+            Color("BackgroundColor").edgesIgnoringSafeArea(.all)
+            ForEach(1..<6){ ring in
+                let size = CGFloat(ring*100)
+                Circle()
+                    .stroke(lineWidth: 20.0)
+                    .fill(RadialGradient(gradient: Gradient(colors: [Color("CircleColor").opacity(0.8*0.3), Color("CircleColor").opacity(0)]), center: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, startRadius: 100, endRadius: 300))
+                    .frame(width: size, height: size)
+            }
         }
     }
 }
